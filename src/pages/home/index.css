@@ -1,0 +1,15 @@
+.main-text {
+  text-align: center;
+}
+
+.home-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(210px,1fr));
+}
