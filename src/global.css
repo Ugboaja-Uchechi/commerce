@@ -1,5 +1,8 @@
 :root {
   --black: #0e0e0e;
+  --gap: 1.5rem;
+  --line-offset: calc(var(--gap) / 2);
+  --line-thickness: .75px;
 }
 
 * {

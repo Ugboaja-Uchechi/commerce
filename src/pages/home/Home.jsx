@@ -1,6 +1,8 @@
 import Header from "../../components/Header"
 import './index.css'
-
+import Nike from "../../assets/nike.jpg";
+import Vans from "../../assets/vans.jpg";
+import Converse from "../../assets/converse.jpg";
 
 const Home = () => {
   return (
@@ -32,7 +34,59 @@ const Home = () => {
 
 
         <div className="grid-container">
+          <div className="grid-cover">
+            <img src={Nike} alt="" />
+          </div>
 
+          <div className="grid-cover">
+            <img src={Vans} alt="" />
+          </div>
+
+          <div className="grid-cover">
+            <img src={Converse} alt="" />
+          </div>
+
+          <div className="grid-cover">
+            <img src={Nike} alt="" />
+          </div>
+          <div className="grid-cover">
+            <img src={Nike} alt="" />
+          </div>
+          <div className="grid-cover">
+            <img src={Nike} alt="" />
+          </div>
+
+          <div className="grid-cover">
+            <img src={Vans} alt="" />
+          </div>
+          <div className="grid-cover">
+            <img src={Vans} alt="" />
+          </div>
+          <div className="grid-cover">
+            <img src={Vans} alt="" />
+          </div>
+          <div className="grid-cover">
+            <img src={Vans} alt="" />
+          </div>
+
+          <div className="grid-cover">
+            <img src={Converse} alt="" />
+          </div>
+          <div className="grid-cover">
+            <img src={Converse} alt="" />
+          </div>
+          <div className="grid-cover">
+            <img src={Converse} alt="" />
+          </div>
+          <div className="grid-cover">
+            <img src={Converse} alt="" />
+          </div>
+          <div className="grid-cover">
+            <img src={Converse} alt="" />
+          </div>
+          <div className="grid-cover">
+            <img src={Converse} alt="" />
+          </div>
         </div>
       </main>
 
