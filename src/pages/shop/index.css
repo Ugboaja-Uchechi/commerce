@@ -1,0 +1,54 @@
+h1 {
+  text-align: center;
+}
+
+.shop-main {
+  display: flex;
+  max-width: 1536px;
+  width: 100%;
+  margin-inline: auto;
+}
+
+.shop-cover {
+  display: flex;
+  gap: 1rem;
+  width: 100%;
+  padding: calc(1.5em * 1);
+  /* Add flex wrap in a media query */
+}
+
+.shop-filter {
+  border: 1px solid black;
+  height: fit-content;
+  /* padding: 1rem; */
+  /* position: static; */
+  flex-basis: 15rem;
+  flex-grow: 0;
+}
+
+.shop-filter h3 {
+  padding-block: .5rem;
+  padding-inline-start: 1rem;
+  border-block-end: 1px solid black;
+}
+
+.shop-filter h3:last-child {
+  border-block-end: none;
+}
+
+.shop-grid {
+  padding: 0!important;
+  grid-template-columns: repeat(auto-fit,minmax(325px,1fr))!important;
+}
+
+@media screen and (max-width: 815px) {
+  .shop-filter {
+    flex-grow: 1;
+  }
+}
+
+@media screen and (max-width: 1027px) {
+  .shop-cover {
+    flex-wrap: wrap;
+  }
+}
