@@ -10,8 +10,17 @@ const ShopDetails = () => {
   // find the product that matches the name from the URL parameters
   const getProducts = Products.find((product) => product.name === name);
 
-  const [addProduct, setAddProduct] = useState();
-  const [subtractProduct, setSubtractProduct] = useState();
+  const [count, setCount] = useState(1);
+
+  const addProducts = () => {
+    setCount((prev) => prev + 1)
+  }
+
+  const subtractProducts = () => {
+    if (count > 1) {
+      setCount((prev) => prev - 1)
+    }
+  }
 
   return (
     <>
@@ -19,35 +28,37 @@ const ShopDetails = () => {
       
       <div className="flex-container">
         {getProducts && (
-          <>
+          <div className="flex-cover">
             <div>
               <img src={getProducts.img} alt={getProducts.name} />
             </div>
 
             <div>
-              <h2>{getProducts.name}</h2>
-              <p>{getProducts.price}</p>
+              <h2 className="name">{getProducts.name}</h2>
+              <p className="price">{getProducts.price}</p>
 
               <div>
-                {getProducts.description}
+                <p className="description">
+                  {getProducts.description} 
+                </p>
               </div>
 
-              <div>
-                <div>
-                  <button>-</button>
-                  <span></span>
-                  <button>+</button>
+              <div className="btn-container">
+                <div className="btns-cover">
+                  <button onClick={subtractProducts}>-</button>
+                  <span>{count}</span>
+                  <button onClick={addProducts}>+</button>
                 </div>
 
                 <div>
-                  <button>
+                  <button className="btn">
                     Add to cart
                   </button>
                 </div>
               </div>
 
             </div>
-          </>
+          </div>
 
         )}
 
