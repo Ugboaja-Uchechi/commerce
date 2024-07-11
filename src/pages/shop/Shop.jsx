@@ -5,60 +5,61 @@ import Adidas from "../../assets/adidas.png";
 import ProductList from "../../components/ProductList";
 import './index.css';
 import Header from "../../components/Header";
+import { Link } from "react-router-dom";
 
 const Products = [
   {
     id: 1,
-    name: "Shoe",
+    name: "Shoe1",
     price: "$50",
     description: "Good shoe",
     img: Nike
   },
   {
     id: 2,
-    name: "Shoe",
+    name: "Shoe2",
     price: "$50",
     description: "Good shoe",
     img: Vans
   },
   {
     id: 3,
-    name: "Shoe",
+    name: "Shoe3",
     price: "$50",
     description: "Good shoe",
     img: Converse
   },
   {
     id: 4,
-    name: "Shoe",
+    name: "Shoe4",
     price: "$50",
     description: "Good shoe",
     img: Adidas
   },
   {
     id: 5,
-    name: "Shoe",
+    name: "Shoe5",
     price: "$50",
     description: "Good shoe",
     img: Converse
   },
   {
     id: 6,
-    name: "Shoe",
+    name: "Shoe6",
     price: "$50",
     description: "Good shoe",
     img: Nike
   },
   {
     id: 7,
-    name: "Shoe",
+    name: "Shoe7",
     price: "$50",
     description: "Good shoe",
     img: Vans
   },
   {
     id: 8,
-    name: "Shoe",
+    name: "Shoe8",
     price: "$50",
     description: "Good shoe",
     img: Converse
@@ -83,7 +84,10 @@ const Shop = () => {
 
               <div className="grid-container shop-grid">
           {Products.map((product) => (
-            <ProductList key={product.id} props={product} />
+            <Link key={product.id} to={`/shop/${product.name}`} className="link">
+              <ProductList props={product} />
+            </Link>
+            
           ))}
         </div>
       </div>

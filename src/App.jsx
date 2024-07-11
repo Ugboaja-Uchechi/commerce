@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
 import Home from "./pages/home/Home"
 import Shop from "./pages/shop/Shop"
+import ShopDetails from "./pages/shop/shopdetails";
 
 const userRoutes = [
   {
@@ -12,6 +13,11 @@ const userRoutes = [
     path: "/shop",
     element: <Shop />,
     title: "Shop"
+  },
+  {
+    path: "/shop/:name",
+    element: <ShopDetails />,
+    title: "Product Detail"
   },
 ];
 
