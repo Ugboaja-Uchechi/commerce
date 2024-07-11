@@ -41,6 +41,14 @@ h1 {
   grid-template-columns: repeat(auto-fit,minmax(325px,1fr))!important;
 }
 
+/* shop details begin */
+
+.flex-container {
+  display: flex;
+  justify-content: space-between;
+  max-width: 42rem;
+}
+
 @media screen and (max-width: 815px) {
   .shop-filter {
     flex-grow: 1;
