@@ -1,14 +1,15 @@
-.main-text {
-  text-align: center;
-}
-
 .home-flex {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: var(--gap);
+  margin-block: .25rem;
 }
 
+.home-flex h3 {
+  font-size: var(--btn-size);
+  font-weight: 500;
+}
 
 /* .product-info p {
   
@@ -18,4 +19,9 @@
   border-block: 1px solid var(--black);
   padding-block: 1rem;
   text-align: center;
+}
+
+.btn-cover a {
+  text-decoration: none;
+  font-size: var(--btn-size);
 }

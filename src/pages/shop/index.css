@@ -30,6 +30,8 @@ h1 {
   padding-block: .5rem;
   padding-inline-start: 1rem;
   border-block-end: 1px solid black;
+  font-size: var(--header-p);
+  font-weight: 500;
 }
 
 .shop-filter h3:last-child {
@@ -50,8 +52,8 @@ h1 {
   max-width: 1536px;
   width: 100%;
   margin-inline: auto;
-  margin-block-start: 5rem;
   padding: calc(1.5em * 1);
+  padding-block-start: 5rem;
 }
 
 .flex-cover {
@@ -106,17 +108,17 @@ h1 {
 
 .btns-cover button {
   border: none;
-  font-size: calc(.7rem + .75vw);
+  font-size: var(--btn-size);
   background-color: transparent;
   cursor: pointer;
 }
 
 .btns-cover span {
-  font-size: calc(.7rem + .75vw);
+  font-size: var(--btn-size);
 }
 
 .btn {
-  font-size: calc(.7rem + .75vw);
+  font-size: var(--btn-size);
   background-color: transparent;
   padding: .5rem;
   padding-inline: 2rem;

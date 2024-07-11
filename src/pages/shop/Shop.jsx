@@ -70,7 +70,7 @@ const Shop = () => {
   return (
     <>
     <Header />
-          <h1>All Products</h1>
+          <h1 className="main-text">All Products</h1>
         <main className="shop-main">
 
       <div className="shop-cover">

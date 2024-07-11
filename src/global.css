@@ -1,8 +1,12 @@
 :root {
   --black: #0e0e0e;
+  --theme: #fff;
   --gap: 1.5rem;
   --line-offset: calc(var(--gap) / 2);
   --line-thickness: .75px;
+  --btn-size: calc(.7rem + .75vw);
+  --main-text: calc(1rem + 1.25vw);
+  --header-p: calc(.5rem + .75vw);
 }
 
 * {
@@ -10,6 +14,18 @@
   padding: 0;
   box-sizing: border-box;
   line-height: 1.5;
+}
+
+a {
+  text-decoration: none;
+  color: var(--black);
+}
+
+.main-text {
+  text-align: center;
+  padding-block-start: 3.5rem;
+  font-size: var(--main-text);
+  font-weight: 500;
 }
 
 .grid-container {
@@ -65,6 +81,11 @@
   object-fit: cover;
 }
 
+.grid-cover p {
+  font-size: var(--header-p);
+  font-weight: 500;
+}
+
 .product-relative {
   position: relative;
 }
@@ -79,4 +100,10 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+@media screen and (max-width: 400px) {
+  .grid-container {
+    grid-template-columns: repeat(auto-fit,minmax(325px,1fr));
+  }
 }

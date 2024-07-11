@@ -72,7 +72,7 @@ const Home = () => {
       <Header />
       <main>
         <div>
-          <h1 className="main-text">All Products</h1>
+          <h1 className="main-text">Products</h1>
         </div>
 
         <div className="home-flex">
@@ -116,4 +116,4 @@ const Home = () => {
   )
 }
 
-export default Home
+export default Home;
