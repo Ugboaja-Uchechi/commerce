@@ -28,11 +28,15 @@ const ShopDetails = () => {
       
       <div className="flex-container">
         {getProducts && (
-          <div className="flex-cover">
-            <div>
-              <img src={getProducts.img} alt={getProducts.name} />
-            </div>
+          <>
+            <div className="flex-cover">
+              <div>
+                <img src={getProducts.img} alt={getProducts.name} />
+              </div>
 
+            </div>
+              
+            <div className="flex-cover">
             <div>
               <h2 className="name">{getProducts.name}</h2>
               <p className="price">{getProducts.price}</p>
@@ -42,6 +46,7 @@ const ShopDetails = () => {
                   {getProducts.description} 
                 </p>
               </div>
+
 
               <div className="btn-container">
                 <div className="btns-cover">
@@ -59,6 +64,8 @@ const ShopDetails = () => {
 
             </div>
           </div>
+          </>
+
 
         )}
 
