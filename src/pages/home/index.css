@@ -24,4 +24,12 @@
 .btn-cover a {
   text-decoration: none;
   font-size: var(--btn-size);
+  font-weight: 600;
+}
+
+@media screen and (max-width: 768px) {
+  .home-flex h3,
+  .btn-cover a {
+    font-size: var(--mobile-size);
+  }
 }

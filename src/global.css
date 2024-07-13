@@ -13,6 +13,7 @@
   --btn-size: calc(.7rem + .75vw);
   --main-text: calc(1rem + 1.25vw);
   --header-p: calc(.5rem + .75vw);
+  --mobile-size: calc(.75rem + 1vw);
 }
 
 * {
@@ -113,5 +114,11 @@ a {
 @media screen and (max-width: 400px) {
   .grid-container {
     grid-template-columns: repeat(auto-fit,minmax(325px,1fr));
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .grid-cover p {
+    font-size: var(--mobile-size);
   }
 }
