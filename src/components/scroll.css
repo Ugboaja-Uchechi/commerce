@@ -1,0 +1,51 @@
+.scroll-flex {
+  display: flex;
+  gap: var(--scroll-gap);
+  overflow-x: hidden;
+  min-width: 100%;
+  border-block-end: 1px solid var(--black);
+}
+
+.right-scroll,
+.left-scroll {
+  display: flex;
+  align-items: center;
+justify-content: space-between;
+user-select: none;
+  gap: var(--scroll-gap);
+  /* transition: 0.3s ease-in-out; */
+  padding-block: 1rem;
+  min-width: 100%;
+}
+
+.right-scroll,
+.left-scroll {
+  animation: scroll 30s linear infinite;
+}
+
+.left-scroll {
+  /* animation: leftscroll 20s linear infinite; */
+  animation-direction: reverse;
+}
+
+.right-scroll li,
+.left-scroll {
+  list-style-type: none;
+  font-size: var(--scroll-text);
+}
+
+.scroll-flex:hover ul {
+animation-play-state: paused;
+}
+
+@keyframes scroll {
+  to {
+    transform: translateX(calc(-100% - var(--scroll-gap)));
+  }
+}
+
+/* @keyframes leftscroll {
+  to {
+    transform: translate3d(-50%, 0, 0);
+  }
+} */

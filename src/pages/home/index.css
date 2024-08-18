@@ -9,6 +9,7 @@
 .home-flex h3 {
   font-size: var(--btn-size);
   font-weight: 500;
+  cursor: pointer;
 }
 
 /* .product-info p {

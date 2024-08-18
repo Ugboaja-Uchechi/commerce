@@ -14,6 +14,8 @@
   --main-text: calc(1rem + 1.25vw);
   --header-p: calc(.5rem + .75vw);
   --mobile-size: calc(.75rem + 1vw);
+  --scroll-text: calc(1.5rem + 1.5vw);
+  --scroll-gap: calc(var(--gap) * 2);
 }
 
 * {
