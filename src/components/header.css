@@ -2,7 +2,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 1px solid var(--black);
+  border-bottom: 1px solid var(--border-color);
   padding-inline: calc(1.5em * 1);
   padding-block: .5rem;
   position: fixed;
@@ -14,6 +14,7 @@
 .header p {
   font-size: var(--header-p);
   font-weight: 500;
+  color: var(--black);
 }
 
 @media screen and (max-width: 768px) {

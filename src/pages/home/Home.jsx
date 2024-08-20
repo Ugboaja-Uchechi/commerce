@@ -4,11 +4,13 @@ import ProductList from "../../components/ProductList";
 import { Link } from "react-router-dom";
 import Products from "../../Data/product";
 import InfiniteScroll from "../../components/InfiniteScroll";
+import Cart from "../../components/Cart";
 
 const Home = () => {
   return (
     <>
       <Header />
+      <Cart />
       <main>
         <div>
           <h1 className="main-text">Products</h1>
@@ -52,7 +54,7 @@ const Home = () => {
       <div
         style={{
           marginBlockStart: "5rem",
-          borderBlockEnd: "1px solid #000",
+          borderBlockEnd: "1px solid var(--border-color)",
         }}
       ></div>
 

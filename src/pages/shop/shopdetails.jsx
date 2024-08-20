@@ -2,6 +2,7 @@ import { useParams } from "react-router-dom"
 import Header from "../../components/Header";
 import Products from "../../Data/product";
 import { useState } from "react";
+import { useCart } from "../../util/usecart";
 
 
 const ShopDetails = () => {
@@ -12,6 +13,8 @@ const ShopDetails = () => {
 
   const [count, setCount] = useState(1);
 
+  const { addToCart } = useCart();
+
   const addProducts = () => {
     setCount((prev) => prev + 1)
   }
@@ -21,6 +24,15 @@ const ShopDetails = () => {
       setCount((prev) => prev - 1)
     }
   }
+
+  const handleAddToCart = () => {
+    addToCart({
+      id: getProducts.id,
+      name: getProducts.name,
+      price: getProducts.price,
+      quantity: count,
+    });
+  };
 
   return (
     <>
@@ -56,7 +68,7 @@ const ShopDetails = () => {
                 </div>
 
                 <div>
-                  <button className="btn">
+                  <button className="btn" onClick={handleAddToCart}>
                     Add to cart
                   </button>
                 </div>

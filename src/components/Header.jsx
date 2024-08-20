@@ -1,7 +1,11 @@
 import { Link } from 'react-router-dom';
 import './header.css';
+import { useCart } from '../util/usecart';
 
 const Header = () => {
+
+  const { cartItems, toggleCartOpen } = useCart();
+
   return (
     <header className='header'>
       <div>
@@ -17,7 +21,7 @@ const Header = () => {
         </h3>
       </div>
       <div>
-        <p>Cart</p>
+        <p onClick={toggleCartOpen}>Cart ({cartItems.length})</p>
       </div>
     </header>
   )
